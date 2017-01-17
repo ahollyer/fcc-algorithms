@@ -8,8 +8,8 @@
 There's so much to learn, but I'm proud of how far I've come! [Free Code Camp](https://freecodecamp.com) has been a great resource, but I've also found the [YDKJS](https://github.com/getify/You-Dont-Know-JS) book series and the [CodeSchool](https://www.codeschool.com) JS courses to be invaluable.
 
 ####Strengths:
-* So far, I've coded all of my own solutions rather than looking at tutorials or other people's work.
-* These challenges have really helped me learn to break a complex task into a series of logical steps.
+* So far, I've coded all of my own solutions rather than looking at tutorials or modifying other people's work.
+* These challenges have helped me learn to break a complex task into a series of logical steps.
 
 ####Things to Improve:
 * Once I finish, I should look at others' solutions to see if they found more efficient ways to solve these problems. Then, I should refactor my code accordingly.

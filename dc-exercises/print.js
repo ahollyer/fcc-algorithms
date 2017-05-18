@@ -5,11 +5,16 @@
 //Write a function which accepts a start and end number, and prints the numbers
 //from one to the other, one per line:
 function printNumbers(start, end) {
-  for(let count=start; count<=end; count++) {
-    console.log(count);
+  // sort numbers
+  arr = [start, end];
+  arr.sort(function(a, b) {return a - b;});
+
+  for(let i = arr[0]; i <= arr[1]; i++) {
+    console.log(i);
   }
 }
-printNumbers(1, 10);
+printNumbers(2, 4);
+printNumbers(10, 1);
 
 //Print a Square
 //Write a function which is given a side length and prints a square

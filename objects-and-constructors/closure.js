@@ -67,10 +67,10 @@ console.log(count.decrement());
 //     this.startNum = startNum;
 //   }
 //   increment() {
-//     return this.startNum++;
+//     return this.startNum+=1;
 //   }
 //   decrement() {
-//     return this.startNum--;
+//     return this.startNum+=1;
 //   }
 // }
 //

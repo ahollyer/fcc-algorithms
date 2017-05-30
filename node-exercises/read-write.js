@@ -24,6 +24,7 @@ rl.question('Input file: ', function(inFile) {
   fs.readFile(inFile, function(error, buffer) {
     if(error) {
       console.error(error.message);
+      rl.close();
       return;
     }
     let inText = buffer.toString().toUpperCase();
@@ -31,6 +32,7 @@ rl.question('Input file: ', function(inFile) {
       fs.writeFile(outFile, inText, function(error, buffer) {
         if(error) {
           console.error(error.message);
+          rl.close();
           return;
         }
         console.log('Wrote to file ' + outFile);

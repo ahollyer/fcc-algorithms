@@ -14,3 +14,15 @@
 //               * * *
 //                 * *
 //                   *
+
+var n = 10;
+
+function printSquare(size) {
+  let sizeCountdown = size;
+  for(let i = 0; i < size; i++) {
+    console.log(' '.repeat(i) + '*'.repeat(sizeCountdown));
+    sizeCountdown--;
+  }
+}
+
+printSquare(n);

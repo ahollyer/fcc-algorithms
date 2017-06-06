@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 
+app.use('/static', express.static('public'));
+
 app.get('/', function(request, response) {
-  response.send('Hello world!');
+  response.send('<h1>Hello world!</h1>');
 });
 
 app.get('/about', function(request, response) {

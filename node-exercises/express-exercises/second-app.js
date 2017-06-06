@@ -75,6 +75,17 @@ app.get('/fav_animals/', function(request, response) {
   response.render('fav_animals.hbs', context);
 });
 
+// 7. Go back through each page and make a .hbs for each one, then use
+// resp.render to render them.
+// SKIPPED
+
+// 8. Create a layout.hbs file in the views folder, including a {{{body}}}
+// placeholder. Use this to create the layout for all pages.
+
+// 9. Create a public folder. Set up express to serve the files within it.
+// Create a css sheet and link it to your layout.hbs
+app.use('/static', express.static('public'));
+
 app.listen(8000, function() {
   console.log('Listening on port 8000.');
 });

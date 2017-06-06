@@ -28,17 +28,33 @@ app.get('/cats_and_dogs/', function(request, response) {
 // user's name is encoded inside the URL.
 // /greet/Kennedy should say "Hello, Kennedy!"
 // /greet/Jamison should say "Hello, Jamison!"
-app.get('/greet/:slug', function(request, response) {
-  let slug = request.params.slug;
-  response.send('Hello, ' + slug + '!');
-});
+// app.get('/greet/:slug', function(request, response) {
+//   let slug = request.params.slug;
+//   response.send('Hello, ' + slug + '!');
+// });
 
 // 4. Adding to the same program, display the year you were born when you
 // report your age in a query parameter.
-app.get('/year', function(request, response) {
+// app.get('/year', function(request, response) {
+//   let age = request.query.age;
+//   let year = new Date().getFullYear() - age;
+//   response.send('You were born in ' + year + '.');
+// });
+
+// 5. Make the greet page say hello to a visitor and tell the year they were
+// born. This time you will use a .hbs file in the view folder to render the
+// message using HTML.
+app.set('view engine', 'hbs');
+app.get('/greet/:slug', function(request, response) {
+  let slug = request.params.slug;
   let age = request.query.age;
   let year = new Date().getFullYear() - age;
-  response.send('You were born in ' + year + '.');
+  let context = {
+    slug: slug,
+    age: age,
+    year: year,
+  };
+  response.render('greet.hbs', context);
 });
 
 app.listen(8000, function() {

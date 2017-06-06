@@ -57,6 +57,24 @@ app.get('/greet/:slug', function(request, response) {
   response.render('greet.hbs', context);
 });
 
+// 6. Copy the given array to your server program. Create a page at the url
+// /fav_animals that will render an ordered list of those animals which are
+// your favorites.
+app.get('/fav_animals/', function(request, response) {
+  let animals = [
+    {name: 'cats', favorite: true},
+    {name: 'dogs', favorite: true},
+    {name: 'tree frogs', favorite: true},
+    {name: 'earth worms', favorite: false},
+    {name: 'guinea pigs', favorite: true},
+  ];
+  let context = {
+    title: 'My Favorite Animals',
+    animals: animals,
+  }
+  response.render('fav_animals.hbs', context);
+});
+
 app.listen(8000, function() {
   console.log('Listening on port 8000.');
 });

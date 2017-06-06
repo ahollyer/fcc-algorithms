@@ -24,6 +24,15 @@ app.get('/cats_and_dogs/', function(request, response) {
   response.send('Living together');
 });
 
+// 3. Adding to the same program, say a greeting to the user, given that the
+// user's name is encoded inside the URL.
+// /greet/Kennedy should say "Hello, Kennedy!"
+// /greet/Jamison should say "Hello, Jamison!"
+app.get('/greet/:slug', function(request, response) {
+  let slug = request.params.slug;
+  response.send('Hello, ' + slug + '!');
+})
+
 app.listen(8000, function() {
   console.log('Listening on port 8000.');
 });

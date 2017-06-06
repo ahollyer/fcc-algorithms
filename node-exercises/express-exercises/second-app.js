@@ -31,7 +31,15 @@ app.get('/cats_and_dogs/', function(request, response) {
 app.get('/greet/:slug', function(request, response) {
   let slug = request.params.slug;
   response.send('Hello, ' + slug + '!');
-})
+});
+
+// 4. Adding to the same program, display the year you were born when you
+// report your age in a query parameter.
+app.get('/year', function(request, response) {
+  let age = request.query.age;
+  let year = new Date().getFullYear() - age;
+  response.send('You were born in ' + year + '.');
+});
 
 app.listen(8000, function() {
   console.log('Listening on port 8000.');

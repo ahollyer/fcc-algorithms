@@ -1,0 +1,35 @@
+/****** Variables *******/
+/********** Mixins ********/
+.bordered {
+  border: 1px solid #5B83AD;
+}
+.padding {
+  padding: 10px;
+}
+pre {
+  border: 1px solid #5B83AD;
+  padding: 10px;
+}
+/****** Nested CSS ******/
+#header {
+  color: #6c94be;
+}
+#header a {
+  font-weight: bold;
+}
+#header a span {
+  text-transform: uppercase;
+}
+#header:hover {
+  color: orange;
+}
+@media (max-width: 768px) {
+  #header {
+    color: black;
+  }
+}
+/******* Color Functions ******/
+body {
+  background-color: #d6e1ed;
+  color: #476a8e;
+}

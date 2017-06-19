@@ -7,6 +7,7 @@ const http = require('http').Server(app)
 const io = require('socket.io')(http)
 
 app.set('view engine', 'hbs')
+app.use('/static', express.static('static'))
 
 app.get('/', function(req, resp) {
   resp.render('chat.hbs')

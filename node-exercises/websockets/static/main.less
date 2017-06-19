@@ -1,0 +1,45 @@
+/****** Variables *******/
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+@pink: orange;
+
+@small: ~"max-width: 768px";
+
+/********** Mixins ********/
+.bordered {
+  border: 1px solid @nice-blue;
+}
+.padding {
+  padding: 10px;
+}
+pre {
+  .bordered;
+  .padding;
+}
+
+/****** Nested CSS ******/
+#header {
+  color: @light-blue;
+
+  a {
+    font-weight: bold;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  &:hover {
+    color: @pink;
+  }
+
+  @media (@small) {
+    color: black;
+  }
+}
+
+/******* Color Functions ******/
+body {
+  background-color: lighten(@light-blue, 30%);
+  color: darken(@nice-blue, 10%)
+}
